@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using projeto_estoque.Application.Entitys.Commands.Requests;
+using projeto_estoque.Application.Entitys.Commands;
 using projeto_estoque.Application.Entitys.Models;
 
 namespace projeto_estoque.Application.Profiles
@@ -8,7 +8,7 @@ namespace projeto_estoque.Application.Profiles
     {
         public ProdutoProfile()
         {
-            CreateMap<ProdutoCadastroRequest, Produto>().ReverseMap();
+            CreateMap<CadastroProdutoCommand, Produto>().ReverseMap();
         }
     }
 }

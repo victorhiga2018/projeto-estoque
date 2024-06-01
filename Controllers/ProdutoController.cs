@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using projeto_estoque.Application.Entitys.Commands.Requests;
+using projeto_estoque.Application.Entitys.Commands;
+using projeto_estoque.Application.Produtos.Queries;
 using projeto_estoque.Repositories;
 
 namespace projeto_estoque.Controllers
@@ -18,7 +19,7 @@ namespace projeto_estoque.Controllers
 
         [HttpPost]
         [Route("/cadastrarProduto")]
-        public ActionResult CadastrarProduto([FromBody] ProdutoCadastroRequest request)
+        public ActionResult CadastrarProduto([FromBody] CadastroProdutoCommand request)
         {
             var result = _mediator.Send(request);
 
@@ -29,7 +30,7 @@ namespace projeto_estoque.Controllers
         [Route("/obterProdutos")]
         public async Task<ActionResult> Produtos()
         {
-            var produtos = await _produtoRepository.ObterTodos();
+            var produtos = await _mediator.Send(new ConsultaProdutoCommand());
 
             return Ok(produtos);
         }
