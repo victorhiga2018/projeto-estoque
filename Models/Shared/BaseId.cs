@@ -3,6 +3,6 @@
     public class BaseId
     {
         public Guid Id { get; set; }
-        public DateTime CriadoEm { get; set; }
+        public DateTime CriadoEm { get; set; } = DateTime.Now;
     }
 }
