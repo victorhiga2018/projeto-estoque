@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using projeto_estoque.Application.Entitys.Commands;
-using projeto_estoque.Application.Produtos.Queries;
+using projeto_estoque.Application.Produtos.Commands;
 using projeto_estoque.Repositories;
 
 namespace projeto_estoque.Controllers
@@ -9,11 +9,9 @@ namespace projeto_estoque.Controllers
     [ApiController]
     public class ProdutoController : ControllerBase
     {
-        private readonly IProdutoRepository _produtoRepository;
         private readonly IMediator _mediator;
-        public ProdutoController(IProdutoRepository produtoRepository, IMediator mediator)
+        public ProdutoController(IMediator mediator)
         {
-            _produtoRepository = produtoRepository;
             _mediator = mediator;
         }
 
@@ -39,7 +37,8 @@ namespace projeto_estoque.Controllers
         [Route("/obterProdutoId/{id}")]
         public async Task<ActionResult> ProdutoPorId(Guid id)
         {
-            var produto = await _produtoRepository.ObterPorId(id);
+            var produto = await _mediator.Send(new ConsultaProdutoPorIdCommand { Id = id } );
+
             return Ok(produto);
         }
     }
