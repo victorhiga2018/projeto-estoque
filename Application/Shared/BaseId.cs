@@ -1,4 +1,4 @@
-﻿namespace projeto_estoque.Models.Shared
+﻿namespace projeto_estoque.Application.Shared
 {
     public class BaseId
     {

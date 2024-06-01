@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using projeto_estoque.Models;
+using projeto_estoque.Application.Entitys.Models;
 
 namespace projeto_estoque.Infrastructure.Context
 {

@@ -1,4 +1,4 @@
-﻿using projeto_estoque.Models;
+﻿using projeto_estoque.Application.Entitys.Models;
 
 namespace projeto_estoque.Repositories
 {

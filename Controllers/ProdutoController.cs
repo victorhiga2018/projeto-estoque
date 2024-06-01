@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using projeto_estoque.Models;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
+using projeto_estoque.Application.Entitys.Commands.Requests;
 using projeto_estoque.Repositories;
 
 namespace projeto_estoque.Controllers
@@ -8,18 +9,20 @@ namespace projeto_estoque.Controllers
     public class ProdutoController : ControllerBase
     {
         private readonly IProdutoRepository _produtoRepository;
-        public ProdutoController(IProdutoRepository produtoRepository)
+        private readonly IMediator _mediator;
+        public ProdutoController(IProdutoRepository produtoRepository, IMediator mediator)
         {
             _produtoRepository = produtoRepository;
+            _mediator = mediator;
         }
 
         [HttpPost]
         [Route("/cadastrarProduto")]
-        public ActionResult CadastrarProduto([FromBody] Produto produto)
+        public ActionResult CadastrarProduto([FromBody] ProdutoCadastroRequest request)
         {
-            _produtoRepository.Cadastrar(produto);
+            var result = _mediator.Send(request);
 
-            return Ok("CADASTRADO COM SUCESSO!");
+            return Ok(result);
         }
 
         [HttpGet]

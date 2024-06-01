@@ -1,9 +1,11 @@
-﻿using projeto_estoque.Models.Shared;
+﻿using MediatR;
+using projeto_estoque.Application.Entitys.Commands.Responses;
 
-namespace projeto_estoque.Models
+namespace projeto_estoque.Application.Entitys.Commands.Requests
 {
-    public class Produto : BaseId
+    public class ProdutoCadastroRequest : IRequest<ProdutoCadastroResponse>
     {
+        public Guid Id { get; set; }
         public string Nome { get; set; }
         public double Preco { get; set; }
         public double Peso { get; set; }
@@ -11,6 +13,5 @@ namespace projeto_estoque.Models
         public string Fabricante { get; set; }
         public string Origem { get; set; }
         public DateTime Validade { get; set; }
-
     }
 }

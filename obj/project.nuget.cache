@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "OGK48gP7Rm2muexVYNzTlOGh6sxpzIqukMKmVCqbm2/LKYzCh48qzxEl9w3VpxdBHJsaIhsBN56Uryok/6GvHg==",
+  "dgSpecHash": "hSQJ8E4HONfgLAisjTKdb06rn1UHsxw/uzFw9++Y64+I7kFpYdi0OAvWIhdRpJqFjM5JcB+HTO2zl/Vu6JtJIg==",
   "success": true,
   "projectFilePath": "C:\\Users\\victor\\Desktop\\projeto_particular\\projeto-estoque\\projeto-estoque.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\victor\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\victor\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\victor\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\victor\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\victor\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\victor\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\victor\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
     "C:\\Users\\victor\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0\\microsoft.codeanalysis.common.4.5.0.nupkg.sha512",
