@@ -13,10 +13,10 @@ namespace projeto_estoque.Repositories
             _context = context;
         }
 
-        public void Atualizar(Produto produto)
+        public async Task Atualizar(Produto produto)
         {
             _context.Update(produto);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
         public void Cadastrar(Produto produto)
@@ -37,9 +37,11 @@ namespace projeto_estoque.Repositories
             return produto; 
         }
 
-        public void Remover(int id)
+        public async Task Remover(Guid id)
         {
-            _context.Remove(id);
+            Produto? produto = await _context.Produtos.FindAsync(id);
+
+            _context.Produtos.Remove(produto);
             _context.SaveChanges();
         }
     }

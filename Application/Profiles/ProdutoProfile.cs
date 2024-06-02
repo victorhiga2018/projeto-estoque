@@ -12,6 +12,7 @@ namespace projeto_estoque.Application.Profiles
         {
             CreateMap<CadastroProdutoCommand, Produto>().ReverseMap();
             CreateMap<ConsultaProdutoPorIdQuery, Produto>().ReverseMap();
+            CreateMap<AtualizaProdutoCommand, Produto>().ReverseMap();
         }
     }
 }

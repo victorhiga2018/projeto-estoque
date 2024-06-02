@@ -7,11 +7,11 @@ using projeto_estoque.Application.Entitys.Responses;
 
 namespace projeto_estoque.Application.Entitys.Handlers
 {
-    public class CadastrarProdutoCommandHandler : IRequestHandler<CadastroProdutoCommand, CadastroProdutoResponse>
+    public class CadastraProdutoCommandHandler : IRequestHandler<CadastroProdutoCommand, CadastroProdutoResponse>
     {
         private readonly IProdutoRepository _produtoRepository;
         private readonly IMapper _mapper;
-        public CadastrarProdutoCommandHandler(IProdutoRepository produtoRepository, IMapper mapper)
+        public CadastraProdutoCommandHandler(IProdutoRepository produtoRepository, IMapper mapper)
         {
             _produtoRepository = produtoRepository;
             _mapper = mapper;

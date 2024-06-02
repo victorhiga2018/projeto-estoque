@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using projeto_estoque.Application.Entitys.Commands;
 using projeto_estoque.Application.Produtos.Commands;
-using projeto_estoque.Repositories;
 
 namespace projeto_estoque.Controllers
 {
@@ -41,5 +40,24 @@ namespace projeto_estoque.Controllers
 
             return Ok(produto);
         }
+
+        [HttpDelete]
+        [Route("/removerProduto/{id}")]
+        public async Task<ActionResult> Delete(Guid id)
+        {
+            var result = await _mediator.Send(new DeletaProdutoPorIdCommand { Id = id });
+
+            return Ok(result);
+        }
+
+        [HttpPut]
+        [Route("/atualizarProduto")]
+        public async Task<ActionResult> Put([FromBody] AtualizaProdutoCommand command)
+        {
+            var result = await _mediator.Send(command);
+
+            return Ok(result);
+        }
+
     }
 }
