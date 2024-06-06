@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\victor\\Desktop\\projeto_particular\\projeto-estoque\\projeto-estoque\\projeto-estoque.csproj": {}
+    "C:\\Users\\victor\\Desktop\\projeto_particular\\projeto-estoque\\projeto-estoque.csproj": {}
   },
   "projects": {
-    "C:\\Users\\victor\\Desktop\\projeto_particular\\projeto-estoque\\projeto-estoque\\projeto-estoque.csproj": {
+    "C:\\Users\\victor\\Desktop\\projeto_particular\\projeto-estoque\\projeto-estoque.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\victor\\Desktop\\projeto_particular\\projeto-estoque\\projeto-estoque\\projeto-estoque.csproj",
+        "projectUniqueName": "C:\\Users\\victor\\Desktop\\projeto_particular\\projeto-estoque\\projeto-estoque.csproj",
         "projectName": "projeto-estoque",
-        "projectPath": "C:\\Users\\victor\\Desktop\\projeto_particular\\projeto-estoque\\projeto-estoque\\projeto-estoque.csproj",
+        "projectPath": "C:\\Users\\victor\\Desktop\\projeto_particular\\projeto-estoque\\projeto-estoque.csproj",
         "packagesPath": "C:\\Users\\victor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\victor\\Desktop\\projeto_particular\\projeto-estoque\\projeto-estoque\\obj\\",
+        "outputPath": "C:\\Users\\victor\\Desktop\\projeto_particular\\projeto-estoque\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\victor\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,32 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
